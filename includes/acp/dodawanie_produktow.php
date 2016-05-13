@@ -57,14 +57,14 @@ $atrybuty_domyslne = kwerenda("SELECT id,nazwa FROM cechy WHERE id_kategorii=0")
 	<td style="width:193.5px;"></td>
 	<td style="width:193.5px;"></td>
 	</tr>
-	</table>
-	
+	</table><br/><br/>
+	</div>
 	<?php
 	while ($row = mysql_fetch_array($atrybuty_domyslne)) {
 	echo "<script type='text/javascript'>dodajCheckbox('".$row[0]."','".$row[1]."');</script>";	
 	}
 	?>
-	</div>
+        
 	<button type="button" class="btn btn-success" style="float:right; margin-right:20px;">Uzupełnij atrybuty</button>
 	<select class="form-control" style="width:200px; margin-left:20px;">
 		<option>Opcja 1</option>
