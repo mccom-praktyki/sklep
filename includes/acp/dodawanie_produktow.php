@@ -9,6 +9,7 @@ $atrybuty_domyslne = kwerenda("SELECT id,nazwa FROM cechy WHERE id_kategorii=0")
 
 
 ?>
+<script type="text/javascript" src="js/produkty_slide.js"></script>
 <script type="text/javascript" src="js/checkbox.js"></script>
 <form method="POST" action="">
 <table>
@@ -66,7 +67,8 @@ $atrybuty_domyslne = kwerenda("SELECT id,nazwa FROM cechy WHERE id_kategorii=0")
 	?>
         
 	<button type="button" class="btn btn-success" style="float:right; margin-right:20px;">Uzupełnij atrybuty</button>
-	<select class="form-control" style="width:200px; margin-left:20px;">
+        <table><tr><td>
+        <select class="form-control" style="width:200px; margin-left:20px;">
 		<option>Opcja 1</option>
 		<option>Opcja 2</option>
 		<option>Opcja 3</option>

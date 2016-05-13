@@ -3,19 +3,19 @@
   $("#slidedown6").hide()
   $("#slidedown8").hide()
   
-//zarz¹dzanie produktami
+//zarzÄ…dzanie produktami
     $("#slidedown3").click(function(){
         $("#slidedown4").stop(true, false).slideToggle("slow");
 		$("#slidedown6").slideUp("slow");
 		$("#slidedown8").slideUp("slow");
     });
-//zarz¹dzanie u¿ytkownikami
+//zarzÄ…dzanie uÅ¼ytkownikami
     $("#slidedown5").click(function(){
         $("#slidedown6").stop(true, false).slideToggle("slow");
         $("#slidedown4").slideUp("slow");
         $("#slidedown8").slideUp("slow");
     });
-//zarz¹dzanie informacjami
+//zarzÄ…dzanie informacjami
     $("#slidedown7").click(function(){
         $("#slidedown8").stop(true, false).slideToggle("slow");
         $("#slidedown6").slideUp("slow");
