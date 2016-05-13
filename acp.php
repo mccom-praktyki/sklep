@@ -39,10 +39,10 @@ require_once("db.php");
 <center><a id="link" href="acp.php"><button type="button" class="slidedown"><p id="pulpit">Pulpit</p></button></a>		
 <button type="button" class="slidedown" id="slidedown3"><p id="pulpit">Produkty</p></button>
 <ul class="nav nav-pills nav-stacked" id="slidedown4" style="background-color:orange;">
-  <li role="presentation"><a href="acp.php?url=1a">Dodaj produkt</a></li>
+  <li id="dodaj_produkt" role="presentation"><a href="acp.php?url=1a">Dodaj produkt</a></li>
   <li role="presentation"><a href="usun_produkt.html">Usuń produkt</a></li>
   <li role="presentation"><a href="edytuj_produkt.html">Edytuj produkt</a></li>
-  <li role="presentation"><a href="acp.php?url=1d">Kategorie</a></li>
+  <li id="dodaj_kategorie" role="presentation"><a href="acp.php?url=1d">Kategorie</a></li>
 </ul>
 
 <button class="slidedown" type="button" id="slidedown5"><p id="pulpit">Użytkownicy</p></button>
