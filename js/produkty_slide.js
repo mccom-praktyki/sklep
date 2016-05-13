@@ -1,6 +1,6 @@
-$(document).ready(function() {
+function produkty(id) {
     $("#slidedown4").show();
     $("#slidedown6").hide();
     $("#slidedown8").hide();
-    $("#dodaj_produkt").addClass("active");
-});
+    $("#"+id+"").addClass("active");
+}
