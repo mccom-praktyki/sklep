@@ -15,9 +15,9 @@ if(!isset($_GET['url'])) {
 
  include "includes/.php"; }
 
-  else if($_GET['url']=='4') {
+  else if($_GET['url']=='1d') {
 
- include "includes/.php"; }
+ include "includes/acp/dodawanie_kategorii.php"; }
 
  else {
 
