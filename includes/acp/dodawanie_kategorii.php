@@ -6,7 +6,9 @@ $_SESSION['Administrator'] = 1;
 if ($_SESSION['Zalogowany']==1 and $_SESSION['Administrator']==1) {
 ?>
 
-test
+<form method="POST" action="">
+
+</form>
 
 <?php
 } else {
