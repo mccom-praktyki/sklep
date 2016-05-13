@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).on("pageload",function(){
     $("#slidedown4").show();
     $("#slidedown6").hide();
     $("#slidedown8").hide();
