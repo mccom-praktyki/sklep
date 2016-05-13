@@ -10,6 +10,9 @@ $atrybuty_domyslne = kwerenda("SELECT id,nazwa FROM cechy WHERE id_kategorii=0")
 
 ?>
 <script type="text/javascript" src="js/produkty_slide.js"></script>
+<script type="text/javascript">
+produkty("dodaj_produkt");
+</script>
 <script type="text/javascript" src="js/checkbox.js"></script>
 <form method="POST" action="">
 <table>
@@ -69,13 +72,17 @@ $atrybuty_domyslne = kwerenda("SELECT id,nazwa FROM cechy WHERE id_kategorii=0")
 	<button type="button" class="btn btn-success" style="float:right; margin-right:20px;">Uzupełnij atrybuty</button>
         <table><tr><td>
         <select class="form-control" style="width:200px; margin-left:20px;">
-		<option>Opcja 1</option>
-		<option>Opcja 2</option>
-		<option>Opcja 3</option>
-		<option>Opcja 4</option>
-		<option>Opcja 5</option>
+	<?php
+        $kategorie = kwerenda("SELECT id,nazwa FROM kategorie");
+	while ($row = mysql_fetch_array($kategorie)) {
+	echo "<option value='".$row[0]."'>".$row[1]."</option>";
+	}
+	
+        ?>
 	</select>
-	<button type="button" class="btn btn-default" style="float:left; margin-left:20px;">Dodaj inne atrybuty</button><br><br><br>
+        </td><td>
+	<button type="button" class="btn btn-default" style="float:left; margin-left:20px;">Dodaj inne atrybuty</button>
+        </td></tr></table><br><br><br>
     <input type="text" class="form-control" placeholder="Producent" style="width:160px; margin-left:20px;">
     <input type="text" class="form-control" placeholder="Model" style="width:160px; margin-left:20px;">
     <input type="text" class="form-control" placeholder="Waga" style="width:160px; margin-left:20px;">
