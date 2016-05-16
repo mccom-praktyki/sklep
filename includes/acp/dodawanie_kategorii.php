@@ -34,8 +34,6 @@ if ($_SESSION['Zalogowany']==1 and $_SESSION['Administrator']==1) {
                     <td>
                         <button type="submit" style="float:right; margin-left:10px;" class="btn btn-danger">Usuń</button></td></tr></table></div>
         <hr>
-
-        <hr>
         <div style="margin-top:30px; width:550px; margin-left:40px;" class="alert alert-info"><div class="glyphicon glyphicon-info-sign"></div> Aby edytować kategorię wybierz ją i kliknij przycisk "edytuj".</div>
         <div class="form-group" style="margin:30px;">
             <label for="sel1">Wybierz kategorię do edycji:</label>
@@ -48,7 +46,7 @@ if ($_SESSION['Zalogowany']==1 and $_SESSION['Administrator']==1) {
                             <option>kat4</option>
                         </select></td>
                     <td>
-                        <button type="submit" style="float:right; margin-left:10px;" class="btn btn-warning">Edytuj</button></td></tr></table></div>>
+                        <button type="submit" style="float:right; margin-left:10px;" class="btn btn-warning">Edytuj</button></td></tr></table></div>
 <?php
 } else {
 header("strona glowna");
