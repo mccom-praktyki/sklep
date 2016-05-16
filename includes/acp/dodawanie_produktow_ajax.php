@@ -29,19 +29,28 @@ return mysql_query($query);
 	
 
 
-		$id = array(); $nazwa = array(); 
+		$nazwa = array(); 
 		$id_razem = array(); $nazwa_razem = array();
 		while($row = mysql_fetch_array($cechy)) {
-        $id[] = $row["id"]; 
-        $nazwa[] = $row["nazwa"];
+			$id[] = $row["id"]; 
+			$nazwa[] = $row["nazwa"];
 		}
 		while($row2 = mysql_fetch_array($kategorie_razem)) {
-        $id_razem[] = $row2["id"]; 
-        $nazwa_razem[] = $row2["nazwa"];
+			$id_razem[] = $row2["id"]; 
+			$nazwa_razem[] = $row2["nazwa"];
 		}
-		$ilosc[] = mysql_num_rows($cechy);
-		$ilosc_razem[] = mysql_num_rows($kategorie_razem);
-		$res = array($id, $nazwa, $ilosc, $id_razem, $nazwa_razem, $ilosc_razem);
+		$ilosc = mysql_num_rows($cechy);
+		$ilosc_razem = mysql_num_rows($kategorie_razem);
+		//$res = array($id, $nazwa, $ilosc, $id_razem, $nazwa_razem, $ilosc_razem);
+		$res = [
+			'id' => $id,
+			'nazwa' => $nazwa,
+			'ilosc' => $ilosc,
+			'id_razem' => $id_razem,
+			'nazwa_razem' => $nazwa_razem,
+			'ilosc_razem' => $ilosc_razem
+		];
+		
 		echo json_encode($res);
 
  

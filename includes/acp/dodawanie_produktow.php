@@ -50,7 +50,7 @@ produkty("dodaj_produkt");
   <div class="form-group">
     <label for="exampleInputFile">Dodaj zdjęcie</label>
     <input type="file" id="exampleInputFile">
-    <p class="help-block">Dodaj zdjęcie tytułowe z komputera.</p>
+    <p class="help-block">Dodaj zdjęcie tytułowe produktu.</p>
   </div>
   </td></tr></table><hr><br>
   <div class="form-group">
@@ -69,9 +69,9 @@ produkty("dodaj_produkt");
 	}
 	?>
         
-	<button type="button" class="btn btn-success" style="float:right; margin-right:20px;">Uzupełnij atrybuty</button>
+	<button type="button" id="uzupelnij_atrybuty" class="btn btn-success" style="float:right; margin-right:20px;">Uzupełnij atrybuty</button>
         <table><tr><td>
-        <select class="form-control" style="width:200px; margin-left:20px;">
+        <select id="select_atrybuty" class="form-control" style="width:200px; margin-left:20px;">
 	<?php
         $kategorie = kwerenda("SELECT id,nazwa FROM kategorie");
 	while ($row = mysql_fetch_array($kategorie)) {
@@ -81,19 +81,26 @@ produkty("dodaj_produkt");
         ?>
 	</select>
         </td><td>
-	<button type="button" class="btn btn-default" style="float:left; margin-left:20px;">Dodaj inne atrybuty</button>
+	<button type="button" id="inne_atrybuty" class="btn btn-default" style="float:left; margin-left:20px;">Dodaj inne atrybuty</button>
         </td></tr></table><br><br><br>
-    <input type="text" class="form-control" placeholder="Producent" style="width:160px; margin-left:20px;">
-    <input type="text" class="form-control" placeholder="Model" style="width:160px; margin-left:20px;">
-    <input type="text" class="form-control" placeholder="Waga" style="width:160px; margin-left:20px;">
-    <input type="text" class="form-control" placeholder="Matryca" style="width:160px; margin-left:20px;"><br><br>
+		<div id="pola_atrybuty">
+	</div>
+	<br><br>
 	<hr>
+	
+	
+	
+	
+	
+	
     <label for="exampleInputFile" style="margin-left:20px;">Dodaj zdjęcia produktu (max. 5)</label>
-    <input type="file" id="exampleInputFile" multiple style="margin-left:20px;">
+	<form id="pliki" enctype="multipart/form-data" action="dodawanie_produktow_ajax_zdjecia.php" method="POST"> 
+    <input type="file" id="zdjecia" name="zdjecia" multiple style="margin-left:20px;">
     <p style="margin-left:20px; float:left;" class="help-block">Wybierz zdjęcia z komputera.</p>
+	</form> 
 	<label style="margin-right:250px; float:right; margin-top:-50px;">Dodane zdjęcia</label>
 	
-<table style=";float: right; margin-right:150px;">
+<table style="float: right; margin-right:150px;">
 	<tr>
 		<td style="width:50px;border: 3px solid black;" id="kolumna1">
 			1.
@@ -154,8 +161,9 @@ produkty("dodaj_produkt");
 	
 	</tr>
 </table><br><br><br><br><br><br><br><br><br>
-<button type="button" class="btn btn-success" style="float:right; margin-right:20px;">Dodaj produkt</button>
+<button type="button" id="akceptuj" class="btn btn-success" style="float:right; margin-right:20px;">Dodaj produkt</button>
 <script type="text/javascript" src="js/produkty_ajax.js"></script>
+<script type="text/javascript" src="js/files_ajax.js"></script>
 <?php
 
 } else {

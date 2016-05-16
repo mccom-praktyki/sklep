@@ -7,13 +7,13 @@ if(!isset($_GET['url'])) {
 
  include "includes/acp/dodawanie_produktow.php"; }
 
- else if($_GET['url']=='2') {
+ else if($_GET['url']=='1b') {
 
- include "includes/.php"; }
+ include "includes/acp/usuwanie_produktow.php"; }
 
- else if($_GET['url']=='3') {
+ else if($_GET['url']=='1c') {
 
- include "includes/.php"; }
+ include "includes/acp/edytuj_produkt.php"; }
 
   else if($_GET['url']=='1d') {
 
