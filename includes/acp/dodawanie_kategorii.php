@@ -33,7 +33,9 @@ if ($_SESSION['Zalogowany']==1 and $_SESSION['Administrator']==1) {
                         </select></td>
                     <td>
                         <button type="submit" style="float:right; margin-left:10px;" class="btn btn-danger">Usuń</button></td></tr></table></div>
-
+        <hr>
+        <div style="margin-top:30px; width:500px; margin-left:40px;" class="alert alert-info"><div class="glyphicon glyphicon-info-sign"></div>  Aby edytować kategorię, kliknij na "dłogupis" znajdujący sie przy nazwie.</div>
+        <div class="form-group" style="margin:30px;">
 <?php
 } else {
 header("strona glowna");
