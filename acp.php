@@ -25,7 +25,7 @@ require_once("db.php");
  <body>
 
 <div id="box">
-<div id="header"><a href="strona_glowna.php"><img src="img/mccom.png" style="height:80px; width:150px; margin-left:20px;margin-top:10px; float: left;"></a>
+<div id="header"><a href="#"><img src="img/mccom.png" style="height:80px; width:150px; margin-left:20px;margin-top:10px; float: left;"></a>
   <div class="dropdown">
     <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="btn1">Zarządzanie kontem
     <span class="caret"></span></button>
@@ -43,7 +43,7 @@ require_once("db.php");
   <li role="presentation"><a href="usun_produkt.html">Usuń produkt</a></li>
   <li role="presentation"><a href="edytuj_produkt.html">Edytuj produkt</a></li>
   <li id="dodaj_kategorie" role="presentation"><a href="acp.php?url=1d">Kategorie</a></li>
-  <li id="dodaj_kategorie" role="presentation"><a href="acp.php?url=1e">Atrybuty</a></li>
+  <li id="dodaj_ceche" role="presentation"><a href="acp.php?url=1e">Atrybuty</a></li>
 </ul>
 
 <button class="slidedown" type="button" id="slidedown5"><p id="pulpit">Użytkownicy</p></button>

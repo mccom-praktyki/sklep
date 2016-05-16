@@ -47,6 +47,7 @@ if ($_SESSION['Zalogowany']==1 and $_SESSION['Administrator']==1) {
                         </select></td>
                     <td>
                         <button type="submit" style="float:right; margin-left:10px;" class="btn btn-warning">Edytuj</button></td></tr></table></div>
+        </form>
 <?php
 } else {
 header("strona glowna");

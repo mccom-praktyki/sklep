@@ -5,6 +5,11 @@ $_SESSION['Administrator'] = 1;
 //-------------------------------------
 if ($_SESSION['Zalogowany']==1 and $_SESSION['Administrator']==1) {
 ?>
+    <script type="text/javascript" src="js/produkty_slide.js"></script>
+    <script type="text/javascript">
+        produkty("dodaj_ceche");
+    </script>
+    <form method="POST" action="">
     <div class="form-group" style="margin:30px;">
         <div style="margin-top:30px; width:500px;" class="alert alert-info"><div class="glyphicon glyphicon-info-sign"></div>  Aby dodać cechę, wybierz kategorię a następnie wpisz jej nazwę.</div>
         <label for="sel1">Wybierz kategorię dla której chcesz dodać cechy:</label>
@@ -66,7 +71,7 @@ if ($_SESSION['Zalogowany']==1 and $_SESSION['Administrator']==1) {
                 </tr>
             </table>
             <button type="submit" class="btn btn-danger" style="float:right;margin-right:70px;margin-top:30px;">Usuń cechy</button>
-   
+   </form>
    
    
 
