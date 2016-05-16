@@ -43,6 +43,7 @@ require_once("db.php");
   <li role="presentation"><a href="usun_produkt.html">Usuń produkt</a></li>
   <li role="presentation"><a href="edytuj_produkt.html">Edytuj produkt</a></li>
   <li id="dodaj_kategorie" role="presentation"><a href="acp.php?url=1d">Kategorie</a></li>
+  <li id="dodaj_kategorie" role="presentation"><a href="acp.php?url=1e">Atrybuty</a></li>
 </ul>
 
 <button class="slidedown" type="button" id="slidedown5"><p id="pulpit">Użytkownicy</p></button>
