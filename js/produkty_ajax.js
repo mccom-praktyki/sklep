@@ -7,16 +7,18 @@ $('#kat_select').change(function() {
       dataType: 'json',                  
       success: function(data)         
       {
-        var id = data[0];              
-        var nazwa = data[1];          
-        var ilosc = data[2];   
-        var id_razem = data[3];   
-        var nazwa_razem = data[4];   
-		var ilosc_razem = data[5];
+        var id = data.id;              
+        var nazwa = data.nazwa;          
+        var ilosc = data.ilosc;   
+        var id_razem = data.id_razem;   
+        var nazwa_razem = data.nazwa_razem;   
+		var ilosc_razem = data.ilosc_razem;
+		
 
 		$('#select_atrybuty').empty();
+		
 		for (var i=0;i<ilosc_razem;i++) {
-		$("#select_atrybuty").append('<option value="'+id_razem[i]+'">'+nazwa_razem[i]+'</option>');
+			$("#select_atrybuty").append('<option value="'+id_razem[i]+'">'+nazwa_razem[i]+'</option>');
 		}
 		$("#select_atrybuty").append('<option value="0">Inne</option>');
 		$("#select_atrybuty option[value='"+wartosc+"']").remove();
@@ -46,9 +48,9 @@ $("#select_atrybuty option[value='"+pole+"']").remove();
       dataType: 'json',                  
       success: function(data)         
       {
-        var id = data[0];              
-        var nazwa = data[1];          
-        var ilosc = data[2];          
+        var id = data.id;              
+        var nazwa = data.nazwa;          
+        var ilosc = data.ilosc;            
 
 		if (id=='undefined') {
 			return
@@ -61,3 +63,16 @@ $("#select_atrybuty option[value='"+pole+"']").remove();
       } 
     });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
