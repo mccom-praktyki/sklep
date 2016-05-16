@@ -40,8 +40,8 @@ require_once("db.php");
 <button type="button" class="slidedown" id="slidedown3"><p id="pulpit">Produkty</p></button>
 <ul class="nav nav-pills nav-stacked" id="slidedown4" style="background-color:orange;">
   <li id="dodaj_produkt" role="presentation"><a href="acp.php?url=1a">Dodaj produkt</a></li>
-  <li role="presentation"><a href="acp.php?url=1b">Usuń produkt</a></li>
-  <li role="presentation"><a href="acp.php?url=1c">Edytuj produkt</a></li>
+  <li id="usun_produkt" role="presentation"><a href="acp.php?url=1b">Usuń produkt</a></li>
+  <li id="edytuj_produkt" role="presentation"><a href="acp.php?url=1c">Edytuj produkt</a></li>
   <li id="dodaj_kategorie" role="presentation"><a href="acp.php?url=1d">Kategorie</a></li>
   <li id="dodaj_ceche" role="presentation"><a href="acp.php?url=1e">Atrybuty</a></li>
 </ul>
