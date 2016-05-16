@@ -19,6 +19,17 @@ if ($_SESSION['Zalogowany']==1 and $_SESSION['Administrator']==1) {
                         <input type="text" class="form-control" placeholder="Wpisz nazwę kategorii" style="width:300px;"></td>
                     <td>
                         <button type="submit" style="margin-left:10px;" class="btn btn-success">Dodaj kategorię</button></div></td></tr></table>
+                        <hr>
+        <div style="margin-top:30px; width:700px; margin-left:40px;" class="alert alert-info"><div class="glyphicon glyphicon-info-sign"></div>  Aby usunąć kategorię zaznacz ją i kliknij przycisk "usuń".</div>
+        <div class="form-group">
+            <label for="sel1">Wybierz kategorię do usunięcia:</label>
+            <select class="form-control">
+                <option>kat1</option>
+                <option>kat2</option>
+                <option>kat3</option>
+                <option>kat4</option>
+            </select>
+        </div>
 
 <?php
 } else {
