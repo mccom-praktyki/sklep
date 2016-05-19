@@ -1,4 +1,5 @@
 $('#kat_select').change(function() {
+	//Kto to kurwa napisał ?! 
 	var wartosc = document.getElementById("kat_select").value;
   $.ajax({                                      
       url: 'includes/acp/dodawanie_produktow_ajax.php',                  
