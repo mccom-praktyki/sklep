@@ -27,6 +27,6 @@ wiersz = wiersz + 1;
 }
 
 var zawartosc = $("#tabelka tr:eq("+wiersz+") td:eq("+kolumna+")").html()
-$("#tabelka tr:eq("+wiersz+") td:eq("+kolumna+")").html(zawartosc + "<input id='checkbox_atrybuty' name='atrybut' value='"+value+"' type='checkbox' /> "+tresc+"<br/>")
+$("#tabelka tr:eq("+wiersz+") td:eq("+kolumna+")").html(zawartosc + "<input id='checkbox_atrybuty' class='"+tresc+"' name='checkbox_atr[]' value='"+value+"' type='checkbox' /> "+tresc+"<br/>")
 pojemnosc = $("#tabelka tr:eq("+wiersz+") td:eq("+kolumna+") input").size();
 }
