@@ -3,27 +3,27 @@ if(!isset($_GET['url'])) {
 
  include "includes/acp/strona_glowna.php"; }
 
- else if ($_GET['url']=='1a') {
+ elseif ($_GET['url']=='1a') {
 
  include "includes/acp/dodawanie_produktow.php"; }
 
- else if($_GET['url']=='1b') {
+ elseif($_GET['url']=='1b') {
 
  include "includes/acp/usuwanie_produktow.php"; }
 
- else if($_GET['url']=='1c') {
+ elseif($_GET['url']=='1c') {
 
  include "includes/acp/edytuj_produkt.php"; }
 
-  else if($_GET['url']=='1d') {
+  elseif($_GET['url']=='1d') {
 
  include "includes/acp/dodawanie_kategorii.php"; }
  
-   else if($_GET['url']=='1d_2') {
+   elseif($_GET['url']=='1d_2') {
 
  include "includes/acp/kategorie_edit.php"; }
  
-   else if($_GET['url']=='1e') {
+   elseif($_GET['url']=='1e') {
 
  include "includes/acp/dodawanie_cech.php"; }
 
