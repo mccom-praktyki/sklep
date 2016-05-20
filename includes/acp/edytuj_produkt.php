@@ -28,7 +28,7 @@ if ($_SESSION['Zalogowany']==1 and $_SESSION['Administrator']==1) {
             <td> </td>
             <td> </td>
             <td> </td>
-            <td><center><button style="background-color: rgba(0,0,0,0); border:none;" class="glyphicon glyphicon-pencil"></button><center></td>
+            <td><button class="glyphicon glyphicon-pencil"></button></td>
         </tr>
         <tr>
             <td> </td>
@@ -37,7 +37,7 @@ if ($_SESSION['Zalogowany']==1 and $_SESSION['Administrator']==1) {
             <td> </td>
             <td> </td>
             <td> </td>
-            <td><center><button style="background-color: rgba(0,0,0,0); border:none;" class="glyphicon glyphicon-pencil"></button><center></td>
+            <td><button class="glyphicon glyphicon-pencil"></button></td>
         </tr>
         <tr>
             <td> </td>
@@ -46,7 +46,7 @@ if ($_SESSION['Zalogowany']==1 and $_SESSION['Administrator']==1) {
             <td> </td>
             <td> </td>
             <td> </td>
-            <td><center><button style="background-color: rgba(0,0,0,0); border:none;" class="glyphicon glyphicon-pencil"></button><center></td>
+            <td><button class="glyphicon glyphicon-pencil"></button></td>
         </tr>
         <tr>
             <td> </td>
@@ -55,7 +55,7 @@ if ($_SESSION['Zalogowany']==1 and $_SESSION['Administrator']==1) {
             <td> </td>
             <td> </td>
             <td> </td>
-            <td><center><button style="background-color: rgba(0,0,0,0); border:none;" class="glyphicon glyphicon-pencil"></button><center></td>
+            <td><button class="glyphicon glyphicon-pencil"></td>
         </tr>
         <tr>
             <td> </td>
@@ -64,7 +64,7 @@ if ($_SESSION['Zalogowany']==1 and $_SESSION['Administrator']==1) {
             <td> </td>
             <td> </td>
             <td> </td>
-            <td><center><button style="background-color: rgba(0,0,0,0); border:none;" class="glyphicon glyphicon-pencil"></button><center></td>
+            <td><button class="glyphicon glyphicon-pencil"></button></td>
         </tr>
     </table>
     <nav style="float:left; margin-left: 40px;">

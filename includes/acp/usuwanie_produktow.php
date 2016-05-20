@@ -12,7 +12,7 @@ if ($_SESSION['Zalogowany']==1 and $_SESSION['Administrator']==1) {
     <form method="POST" action="">
         <div style="margin-top:30px; width:550px;" class="alert alert-danger" role="alert"><div class="glyphicon glyphicon-info-sign"></div>Aby usunąć produkt zaznacz go na liście, następnie kliknij przycisk "Usuń".</div>
         <table border="2px" style="width:100%;" align="center">
-            <tr>
+            <thead><tr>
                 <th> </th>
                 <th>ID</th>
                 <th>Nazwa</th>
@@ -20,9 +20,9 @@ if ($_SESSION['Zalogowany']==1 and $_SESSION['Administrator']==1) {
                 <th>Cena</th>
                 <th>Kategoria</th>
                 <th>Ilość</th>
-            </tr>
-            <tr>
-                <td><center><input type="checkbox"/></center></td>
+            </tr></thead>
+            <tbody><tr>
+                <td><input type="checkbox" id="checkbox"/></td>
                 <td> </td>
                 <td> </td>
                 <td> </td>
@@ -31,7 +31,7 @@ if ($_SESSION['Zalogowany']==1 and $_SESSION['Administrator']==1) {
                 <td> </td>
             </tr>
             <tr>
-                <td><center><input type="checkbox"/></center></td>
+                <td><input type="checkbox" id="checkbox" /></td>
                 <td> </td>
                 <td> </td>
                 <td> </td>
@@ -40,7 +40,7 @@ if ($_SESSION['Zalogowany']==1 and $_SESSION['Administrator']==1) {
                 <td> </td>
             </tr>
             <tr>
-                <td><center><input type="checkbox"/></center></td>
+                <td><input type="checkbox" id="checkbox"/></td>
                 <td> </td>
                 <td> </td>
                 <td> </td>
@@ -49,23 +49,14 @@ if ($_SESSION['Zalogowany']==1 and $_SESSION['Administrator']==1) {
                 <td> </td>
             </tr>
             <tr>
-                <td><center><input type="checkbox"/></center></td>
+                <td><input type="checkbox" id="checkbox"/></td>
                 <td> </td>
                 <td> </td>
                 <td> </td>
                 <td> </td>
                 <td> </td>
                 <td> </td>
-            </tr>
-            <tr>
-                <td><center><input type="checkbox"/></center></td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-            </tr>
+            </tr></tbody>
         </table>
         <button type="submit" style="float:right; margin-right: 40px; margin-top:20px;" class="btn btn-danger">Usuń</button>
         <nav style="float:left; margin-left: 40px;">
