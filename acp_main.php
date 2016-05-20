@@ -19,6 +19,10 @@ if(!isset($_GET['url'])) {
 
  include "includes/acp/dodawanie_kategorii.php"; }
  
+   else if($_GET['url']=='1d_2') {
+
+ include "includes/acp/kategorie_edit.php"; }
+ 
    else if($_GET['url']=='1e') {
 
  include "includes/acp/dodawanie_cech.php"; }

@@ -1,5 +1,5 @@
 $('#kat_select').change(function() {
-	var wartosc = document.getElementById("kat_select").value;
+	var wartosc = $('#kat_select').val();
   $.ajax({                                      
       url: 'includes/acp/dodawanie_produktow_ajax.php',                  
       data: { kategoria: this.value },                  
@@ -14,7 +14,7 @@ $('#kat_select').change(function() {
         var nazwa_razem = data.nazwa_razem;   
 		var ilosc_razem = data.ilosc_razem;
 		
-
+		$("#pola_atrybuty").html("")
 		$('#select_atrybuty').empty();
 		
 		for (var i=0;i<ilosc_razem;i++) {
@@ -39,7 +39,7 @@ $('#kat_select').change(function() {
 
 
 $('#inne_atrybuty').click(function() {
-var pole = document.getElementById("select_atrybuty").value;
+var pole = $('#select_atrybuty').val();
 $("#select_atrybuty option[value='"+pole+"']").remove();
   $.ajax({                                      
       url: 'includes/acp/dodawanie_produktow_ajax.php',                  
@@ -65,14 +65,13 @@ $("#select_atrybuty option[value='"+pole+"']").remove();
 });
 
 
+$('#uzupelnij_atrybuty').click(function() {
+	$("#pola_atrybuty").html("")
+$('input[id="checkbox_atrybuty"]:checked').each(function() {
+	var value = $(this).val();
+	var nazwa = $(this).attr("class")
+	var zawartosc = $("#pola_atrybuty").html()
+$("#pola_atrybuty").html(zawartosc + "<input style='width:160px; margin-left:20px;' id='"+value+"' class='atrybut_pole form-control' name='atrybuty[]' placeholder='"+nazwa+"' type='text' /><br/>")
 
-
-
-
-
-
-
-
-
-
-
+});
+});
