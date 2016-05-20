@@ -22,7 +22,7 @@ if ($_SESSION['Zalogowany']==1 and $_SESSION['Administrator']==1) {
                 <th>Ilość</th>
             </tr></thead>
             <tbody><tr>
-                <td><input type="checkbox" id="checkbox"/></td>
+                <td><input type="checkbox" class="checkbox"/></td>
                 <td> </td>
                 <td> </td>
                 <td> </td>
@@ -31,7 +31,7 @@ if ($_SESSION['Zalogowany']==1 and $_SESSION['Administrator']==1) {
                 <td> </td>
             </tr>
             <tr>
-                <td><input type="checkbox" id="checkbox" /></td>
+                <td><input type="checkbox" class="checkbox" /></td>
                 <td> </td>
                 <td> </td>
                 <td> </td>
@@ -40,7 +40,7 @@ if ($_SESSION['Zalogowany']==1 and $_SESSION['Administrator']==1) {
                 <td> </td>
             </tr>
             <tr>
-                <td><input type="checkbox" id="checkbox"/></td>
+                <td><input type="checkbox"class="checkbox"/></td>
                 <td> </td>
                 <td> </td>
                 <td> </td>
@@ -49,7 +49,7 @@ if ($_SESSION['Zalogowany']==1 and $_SESSION['Administrator']==1) {
                 <td> </td>
             </tr>
             <tr>
-                <td><input type="checkbox" id="checkbox"/></td>
+                <td><input type="checkbox" class="checkbox"/></td>
                 <td> </td>
                 <td> </td>
                 <td> </td>
