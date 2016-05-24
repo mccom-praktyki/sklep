@@ -54,7 +54,7 @@ require_once("db.php");
 	</div>
 	<div id="srodek">
 		<center>
-			<div style="width:940px; height:40px;margin-top:4px" id="owl-demo2" class="kategorie">
+			<div style="width:940px; height:40px;margin-top:4px" id="owl-demo" class="kategorie">
 	<form method="GET" action="">
 	<?php
 	$kategorie = kwerenda("SELECT * FROM kategorie");
