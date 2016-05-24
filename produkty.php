@@ -18,8 +18,11 @@
  <body>
 <?php
 require_once("db.php");
+if (isset($_GET['kat'])) {
+$val = $_GET['kat'];
+echo "<input id='kat_p' type='hidden' value='".$val."'";
+}
 ?>
-
 <div id="box">
 	<div id="header">
 		<a href="#"><img src="img/mccom.png" style="height:80px; width:150px; margin-left:20px;margin-top:10px; float: left;"></a>
@@ -54,23 +57,33 @@ require_once("db.php");
 	</div>
 	<div id="srodek">
 		<center>
-			<form method="GET" action="">
-			<div id="owl-demo" class="kategorie">
-
+	<form method="GET" action="">
+	<div id="owl-demo" class="kategorie">
 	<?php
 	$kategorie = kwerenda("SELECT * FROM kategorie");
 	if (mysql_num_rows($kategorie)>=0) {
 	while ($row = mysql_fetch_array($kategorie)) {
 	echo "<button class='kat' name='kat' value='".$row[0]."'>".$row[1]."</button>";
 	}
-	echo "<button class='kat' name='kat' value='0'>Inne</button>";
 	}
 	?>
-			</div></form>
+	<button class='kat' name='kat' value='0'>Inne</button>
+	<input type="hidden" name="url" value="1" />
+	</div></form>
 			<button id="btnleft" type="button" class="glyphicon glyphicon-triangle-left button"></button>
 			<button id="btnright" type="button" class="glyphicon glyphicon-triangle-right button"></button>
 		</center>
 		<br>
+		
+		<script>
+function podglad(id) {
+
+	alert(id);
+	
+}
+
+</script>
+		
 		
 <?php
 require("produkty_main.php");
