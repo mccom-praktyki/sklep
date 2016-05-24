@@ -62,7 +62,8 @@ require_once("db.php");
 	if (mysql_num_rows($kategorie)>=0) {
 	while ($row = mysql_fetch_array($kategorie)) {
 	echo "<button class='kat' name='kat' value='".$row[0]."'>".$row[1]."</button>";
-			"<button class='kat' name='kat' value='0'>Inne</button>"
+	}
+	echo "<button class='kat' name='kat' value='0'>Inne</button>";
 	}
 	?>
 			</div></form>
