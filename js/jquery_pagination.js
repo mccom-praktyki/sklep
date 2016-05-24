@@ -16,7 +16,12 @@ $("#loading").fadeOut('slow');
 $("#pagination li:eq(1)")
 .addClass('active');
 Display_Load();
+var wartosc = $("#kat_p").val();
+if (wartosc>=0) {
+$("#content").load("includes/index/pagination_data.php?page=1&kat="+wartosc, Hide_Load());
+} else {
 $("#content").load("includes/index/pagination_data.php?page=1", Hide_Load());
+}
 
 //Pagination Click
 $("#pagination li").click(function(){
@@ -30,7 +35,14 @@ $(this)
 
 //Loading Data
 var pageNum = this.id;
+
+if (wartosc>=0) {
+$("#content").load("includes/index/pagination_data.php?page=" + pageNum +"&kat="+wartosc, Hide_Load());
+} else {
 $("#content").load("includes/index/pagination_data.php?page=" + pageNum, Hide_Load());
+}
+
+
 });
 
 });
