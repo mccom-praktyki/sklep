@@ -55,15 +55,17 @@ require_once("db.php");
 	<div id="srodek">
 		<center>
 			<div style="width:940px; height:40px;margin-top:4px" id="owl-demo2" class="kategorie">
+	<form method="GET" action="">
 	<?php
 	$kategorie = kwerenda("SELECT * FROM kategorie");
 	if (mysql_num_rows($kategorie)>=0) {
 	while ($row = mysql_fetch_array($kategorie)) {
-	echo "<button class='kat' value='".$row[0]."'>".$row[1]."</button>";
+	echo "<button class='kat' name='kat' value='".$row[0]."'>".$row[1]."</button>";
 	}
-	echo "<button class='kat' value='0'>Inne</button>";
+	echo "<button class='kat' name='kat' value='0'>Inne</button>";
 	}
 	?>
+	</form>
 
 			</div>
 			<button id="btnleft" type="button" style="height:50px; width:25px;" class="glyphicon glyphicon-triangle-left button"></button>
@@ -74,6 +76,7 @@ require_once("db.php");
 <?php
 require("produkty_main.php");
 ?>
+
 	</div>
 	<div id="pprawy">
 		<div class="dropdown" style="margin-right:25px; margin-top:5px;">
