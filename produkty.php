@@ -54,8 +54,9 @@ require_once("db.php");
 	</div>
 	<div id="srodek">
 		<center>
+			<form method="GET" action="">
 			<div style="width:940px; height:40px;margin-top:4px" id="owl-demo" class="kategorie">
-	<form method="GET" action="">
+
 	<?php
 	$kategorie = kwerenda("SELECT * FROM kategorie");
 	if (mysql_num_rows($kategorie)>=0) {
