@@ -54,7 +54,7 @@ require_once("db.php");
 	</div>
 	<div id="srodek">
 		<center>
-			<div style="width:840px; height:40px;margin-top:0px" id="owl-demo" class="kategorie">
+			<div style="width:940px; height:40px;margin-top:4px" id="owl-demo2" class="kategorie">
 				<button class="kat">Kategoria 1</button>
 				<button class="kat">Kategoria 2</button>
 				<button class="kat">Kategoria 3</button>
@@ -66,8 +66,8 @@ require_once("db.php");
 				<button class="kat">Kategoria 9</button>
 				<button class="kat">Kategoria 10</button>
 			</div>
-			<button id="btnleft" type="button" style="height:40px; width:25px;" class="glyphicon glyphicon-triangle-left"></button>
-			<button id="btnright" type="button" style="height:40px; width:25px;" class="glyphicon glyphicon-triangle-right"></button>
+			<button id="btnleft" type="button" style="height:50px; width:25px;" class="glyphicon glyphicon-triangle-left button""></button>
+			<button id="btnright" type="button" style="height:50px; width:25px;" class="glyphicon glyphicon-triangle-right button"></button>
 		</center>
 		<br>
 		<div>
