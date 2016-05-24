@@ -11,7 +11,7 @@
 	<!-- OWL Carousel -->
 	<link rel="stylesheet" href="owlcarousel/assets/owl.carousel.css">
 	<script src="owlcarousel/owl.carousel.min.js"></script>
-	<script src="js/produkty_carousel.js"></script>
+	<script src="js/index.js"></script>
 	<!-- CSS -->
 	<link href="css/index.css" rel="stylesheet">
   </head>
