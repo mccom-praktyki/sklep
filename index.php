@@ -22,7 +22,7 @@ require_once("db.php");
 
 <div id="box">
 	<div id="header">
-		<a href="#"><img src="mccom.png" style="height:80px; width:150px; margin-left:20px;margin-top:10px; float: left;"></a>
+		<a href="#"><img src="img/mccom.png" style="height:80px; width:150px; margin-left:20px;margin-top:10px; float: left;"></a>
 		<div><form class="navbar-form navbar-left" style="margin-left:375px;margin-top:30px;" role="search">
 				<div class="form-group">
 					<input type="text" class="form-control" placeholder="Wyszukiwarka">
@@ -59,9 +59,9 @@ require_once("db.php");
 			<button id="btnright" type="button" style="height:50px; width:25px;" class="glyphicon glyphicon-triangle-right button"></button>
 		</center>
 		<div id="owl-demo" class="owl-carousel owl-theme">
-			<div class="demo"><img src="1.jpg"></div>
-			<div class="demo"><img src="2.jpg"></div>
-			<div class="demo"><img src="3.jpg"></div>
+			<div class="demo"><img src="img/1.jpg"></div>
+			<div class="demo"><img src="img/2.jpg"></div>
+			<div class="demo"><img src="img/3.jpg"></div>
 		</div>
 	</div>
 <?php
