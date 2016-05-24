@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script type="text/javascript" />
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+
+    $('.field input').keyup(function() {
+    $('#chec').click(function() {
+	
+
+        var empty = false;
+        $('.field input').each(function() {
+            if ($(this).val().length == 0) {
+                empty = true;
+            }
+        });
+
+        if (!empty && $('#chec').is(':checked')) {
+			$('.actions input').removeAttr('disabled');
+        } else {
+            $('.actions input').attr('disabled', 'disabled');
+        }
+    });
+    });
+});
+
+</script>
+<style>
+#box {
+width:1200px;
+min-height:700px;
+background-color:#969696;
+}
+
+
+#footer {
+	background-color: #C4C4C4;
+	width:1198px;
+	height:45px;
+	}
+
+	
+</style>
+</head>
+
+<body>
+<div id="box" style="margin:auto; border:1px solid;">
+<div style="width:1200px; height:200px;">
+	<table>
+		<tr>
+			<td style="height:100px; width:30%;" ><a href="#"><img style="height:80px; width:150px; margin:10px 0px 0px 15px;" src="mccom.png"></a></td>
+			<th><a href="index_niezal.html"><span style="float:right;"><h4>Powrót do strony głównej<span class="glyphicon glyphicon-home" aria-hidden="true"></span></h4></span></a></th>
+		</tr>
+	</table>
+</div>
+				
+	<form>						
+	<div style="width:890px; height:400px; margin-left:15%; margin-top:50px;">						
+		<div class="form-group">
+			<div class='field'>	
+				<span>Podaj adres e-mail</span>
+					<input type="email" class="form-control" id="inputPassword3" placeholder="Podaj email">
+			</div>
+		</div>
+		<div class="form-group">
+			<div class='field'>
+				<span for="exampleInputPassword1">Podaj login</span>
+					<input type="login" class="form-control" id="exampleInputPassword1"  placeholder="Login">
+			</div>
+		</div>
+		<div class="form-group">
+			<div class='field'>
+				<span for="exampleInputPassword1">Podaj hasło</span>
+					<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Hasło">
+			</div>
+		</div>	
+		<div class="form-group">
+			<div class='field'>
+				<span for="exampleInputPassword1">Powtórz hasło</span>
+					<input type="password" class="form-control" id="exampleInputPassword1"  placeholder="Hasło">
+			</div>
+		</div>
+		<div class="checkbox" style="margin-left:20px;">
+			<div class='field'>	
+				<span>
+					<input type="checkbox" id="chec"/> <span class="btn btn-default" data-toggle="modal" data-target="#myModal3">Akceptuję regulamin </span>
+				</span>
+			</div>
+			<div class="modal-footer">
+				<div class='actions'>
+					<input type="submit" style="margin:10px 10% 5% 70%;" class="btn btn-success"  disabled="disabled"/>
+				</div>
+			</div>
+		</div>
+		</div>	
+	</form>
+
+<div id="footer">
+	<table style="width:800px;float:right;">
+	<tr>
+	<td><span class="btn btn-default" data-toggle="modal" data-target="#myModal">
+	Dane firmy</span></td>
+	<td><span class="btn btn-default" data-toggle="modal" data-target="#myModal2">
+	Kontakt</span></td>
+	<td><span class="btn btn-default" data-toggle="modal" data-target="#myModal3">
+	Regulamin</span></td>
+	</tr></table>
+<!--MODAL  Dane firmy-->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					Dane firmy  
+				</div>
+					<div class="modal-footer">
+						<button class="btn btn-default" data-dismiss="modal">Zamknij</button>
+					</div>
+			</div>
+		</div>
+	</div>
+<!--MODAL2 Kontakt-->
+	<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					Kontakt
+				</div>
+					<div class="modal-footer">
+						<button class="btn btn-default" data-dismiss="modal">Zamknij</button>
+					</div>
+			</div>
+		</div>
+	</div>
+<!--MODAL3 Regulamin-->
+	<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					Copyright by Praktykanci MCCOM &trade; &copy 2016
+						 
+				</div>
+					<div class="modal-footer">
+						<button class="btn btn-default" data-dismiss="modal">Zamknij</button>
+					</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</body>
+</html> 
