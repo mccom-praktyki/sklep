@@ -2,7 +2,7 @@ $(document).ready(function() {
     $(".kategorie").owlCarousel({
         nav : true,
         navText : [btnleft, btnright],
-        loop : false,
+        loop : true,
     });
 });
 $(document).ready(function(){

@@ -66,9 +66,7 @@ require_once("db.php");
 	echo "<button class='kat' name='kat' value='0'>Inne</button>";
 	}
 	?>
-	</form>
-
-			</div>
+			</div></form>
 			<button id="btnleft" type="button" class="glyphicon glyphicon-triangle-left button"></button>
 			<button id="btnright" type="button" class="glyphicon glyphicon-triangle-right button"></button>
 		</center>
