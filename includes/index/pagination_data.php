@@ -7,18 +7,33 @@ $page=$_GET['page'];
 }
 
 $start = ($page-1)*$per_page;
+if (isset($_GET['kat'])) {
+$kat_p = $_GET['kat'];
+$sql = kwerenda("SELECT * FROM produkty WHERE kategoria='$kat_p' ORDER BY id LIMIT $start,$per_page");
+} else {
 $sql = kwerenda("SELECT * FROM produkty ORDER BY id LIMIT $start,$per_page");
+}
 ?>
 <table width="850px">
 <?php
 $kolumna1 = 3;
 $kolumna2 = 3;
+$count = mysql_num_rows($sql);
+
+if ($count<=0) {
+echo "<h2>Nie odnaleziono żadnych produktów</h2>";
+}
 
 while($row = mysql_fetch_array($sql))
 {
 
 $nazwa=$row['nazwa'];
 $cena=$row['cena'];
+$id=$row['id'];
+
+if (strlen($nazwa)>=25) {
+$nazwa = wordwrap($nazwa, 20, "<br/>", true);
+}
 
 if ($kolumna2>=6) {
 echo "</tr>";
@@ -30,15 +45,17 @@ $kolumna1 = 0;
 }
 
 ?>
-
-<td align="center">
+<form method="GET" action="">
+<td align="center" id="produkt">
 <div id="products" style="margin-right:30px;" class="row list-group" >
 <div id="products2" class="item  col-xs-4 col-lg-4">
 <div class="thumbnail">
-<img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+<img style="cursor:pointer;" onclick='podglad(<?php echo $id; ?>)' class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
 <div class="caption">
-<h4 class="group inner list-group-item-heading">
-<?php echo $nazwa; ?>
+<h4 style="cursor:pointer;" onclick='podglad(<?php echo $id; ?>)' class="group inner list-group-item-heading">
+<?php echo $nazwa; 
+
+?>
 </h4>
 <div class="row">
 <div class="col-xs-12 col-md-6">
@@ -55,7 +72,7 @@ $kolumna1 = 0;
 </div>
 </div>
 </td>
-
+</form>
 <?php
 $kolumna1 = $kolumna1 + 1;
 $kolumna2 = $kolumna2 + 1;

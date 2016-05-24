@@ -1,17 +1,24 @@
 <?php
 $per_page = 9; 
+if (isset($_GET['kat'])) {
+$kategoria = $_GET['kat'];
+$sql = kwerenda("SELECT * FROM produkty WHERE kategoria=$kategoria");
+} else {
 $sql = kwerenda("SELECT * FROM produkty");
+}
+
 $count = mysql_num_rows($sql);
 $pages = ceil($count/$per_page)
 ?>
 
 <script type="text/javascript" src="js/jquery_pagination.js"></script>
-<script type="text/javascript" src="js/lista_produktow.js"></script>
 
 <center><div id="loading" ></div></center>
 <div id="content" ></div>
 
-
+<?php
+if ($count>9) {
+?>
 <nav style="margin-top:50px;"><center>
   <ul id="pagination" style="cursor:pointer;" class="pagination">
     <li>
@@ -33,6 +40,10 @@ $pages = ceil($count/$per_page)
   </ul>
   </center>
 </nav>
+<?php
+}
+?>
+
 
 
 
