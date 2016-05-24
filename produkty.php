@@ -68,8 +68,8 @@ require_once("db.php");
 	</form>
 
 			</div>
-			<button id="btnleft" type="button" style="height:50px; width:25px;" class="glyphicon glyphicon-triangle-left button"></button>
-			<button id="btnright" type="button" style="height:50px; width:25px;" class="glyphicon glyphicon-triangle-right button"></button>
+			<button id="btnleft" type="button" class="glyphicon glyphicon-triangle-left button"></button>
+			<button id="btnright" type="button" class="glyphicon glyphicon-triangle-right button"></button>
 		</center>
 		<br>
 		
