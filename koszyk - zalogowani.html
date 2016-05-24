@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script type="text/javascript" />
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.field input').keyup(function() {
+
+        var empty = false;
+        $('.field input').each(function() {
+            if ($(this).val().length == 0) {
+                empty = true;
+            }
+        });
+
+        if (empty) {
+            $('.actions input').attr('disabled', 'disabled');
+        } else {
+            $('.actions input').removeAttr('disabled');
+        }
+    });
+});
+
+</script>
+</head>
+<style>
+#box {
+	min-height: 940px;
+	width: 1150px;
+	margin: auto;
+	}
+#header {
+	height: 100px;
+	background-color: #C4C4C4;
+	}
+#obrazek {
+background-size:cover;
+}
+
+#footer{
+	background-color: #C4C4C4;
+	height:36px;
+		}
+		
+#tabelka{
+	min-height:720px;
+	width:1150px;
+	background-color: #969696;
+}
+
+.dropdown {
+	float: right;
+	}
+#koszyk{
+width:50px;
+height:50px;
+margin-top:45px;
+margin-left:80px;
+background: rgb(246,230,180); /* Old browsers */
+		background: -moz-linear-gradient(top,  rgba(246,230,180,1) 0%, rgba(237,144,23,1) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  rgba(246,230,180,1) 0%,rgba(237,144,23,1) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  rgba(246,230,180,1) 0%,rgba(237,144,23,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', endColorstr='#ed9017',GradientType=0 ); /* IE6-9 */
+border:none;
+text-decoration:none;
+		}
+#btn1{
+		background: rgb(246,230,180); /* Old browsers */
+		background: -moz-linear-gradient(top,  rgba(246,230,180,1) 0%, rgba(237,144,23,1) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  rgba(246,230,180,1) 0%,rgba(237,144,23,1) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  rgba(246,230,180,1) 0%,rgba(237,144,23,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', endColorstr='#ed9017',GradientType=0 ); /* IE6-9 */}
+
+.item {
+height:40px;
+width:200px;
+background: black;
+color: black;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  background: rgb(246,230,180); /* Old browsers */
+		background: -moz-linear-gradient(top,  rgba(246,230,180,1) 0%, rgba(237,144,23,1) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  rgba(246,230,180,1) 0%,rgba(237,144,23,1) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  rgba(246,230,180,1) 0%,rgba(237,144,23,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', endColorstr='#ed9017',GradientType=0 ); /* IE6-9 */;
+}
+
+.btn1{text-decoration:none; border:none;}
+#menu1{background: rgb(246,230,180); /* Old browsers */
+		background: -moz-linear-gradient(top,  rgba(246,230,180,1) 0%, rgba(237,144,23,1) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  rgba(246,230,180,1) 0%,rgba(237,144,23,1) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  rgba(246,230,180,1) 0%,rgba(237,144,23,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', endColorstr='#ed9017',GradientType=0 ); /* IE6-9 */;
+		border:none;
+		text-decoration:none;
+}
+
+</style>
+<body>
+<div id="box">
+<div id="header">
+	<a href="#"><img src="mccom.png" style="height:80px; width:150px; margin-left:20px;margin-top:10px; float: left;"></a>
+		<div><form class="navbar-form navbar-left" style="margin-left:375px;margin-top:30px;" role="search">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Wyszukiwarka">
+				</div>
+				<button type="submit" class="btn btn-default">Szukaj</button>
+		</form></div>
+	<div class="dropdown">
+		<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="btn1"><span class="glyphicon glyphicon-user" style="width:10px; margin-right:7px;" aria-hidden="true"></span>Zarządzanie kontem
+		<span class="caret"></span></button>
+		<ul class="dropdown-menu" style="margin-top:-20px;">
+		<li><a href="#">Ustawienia</a></li>
+		<li><a href="#">Wyloguj</a></li>
+		</ul><br><br>
+	</div>
+<button class="btn btn-default glyphicon glyphicon-shopping-cart" id="koszyk"></button>
+</div>
+
+<div  id="tabelka">
+	<table id="tabelka">
+	<tr>
+		<td>
+			<table id="tabelka">
+					<thead style="width:1150px; height:100px; background-color:#797D82;">
+					
+						<th style="width:270px;"></th>
+						<th style="width:270px;">Produkt</th>
+						<th style="width:270px;">Cena</th>
+						<th style="width:270px;">Ilość</th>
+						<th style="width:270px;">Wartość łączna</th>
+					
+					</thead>
+					<tbody>
+					
+						<tr style="width:1150px;" >
+							<td>
+								<img src="koszyk.jpg" style="width:100px; height:100px;">
+							</td>
+							<td><label>Nazwa produktu</label></td>
+							<td>Cena</td>
+							<td>
+								<form action="#">
+									<input type="number" placeholder="ilość" size="5" name="points" min="0" max="20">
+								<form>
+							</td>
+							<td>Wartość łączna</td>
+						</tr>
+						<tr style="width:1150px;">
+							
+							<td>
+								<img src="koszyk.jpg" style="width:100px; height:100px;">
+							</td>
+							<td><label>Nazwa produktu</label></td>
+							<td>Cena</td>
+							<td>
+								<form action="#">
+									<input type="number" placeholder="ilość" size="5" name="points" min="0" max="20">
+								<form>
+							</td>
+							<td>Wartość łączna</td>
+						</tr><tr style="width:1150px;">
+							
+							<td>
+								<img src="koszyk.jpg" style="width:100px; height:100px;">
+							</td>
+							<td><label>Nazwa produktu</label></td>
+							<td>Cena</td>
+							<td>
+								<form action="#">
+									<input type="number" placeholder="ilość" size="5" name="points" min="0" max="20">
+								<form>
+							</td>
+							<td>Wartość łączna</td>
+						</tr><tr style="width:1150px;">
+							
+							<td>
+								<img src="koszyk.jpg" style="width:100px; height:100px;">
+							</td>
+							<td><label>Nazwa produktu</label></td>
+							<td>Cena</td>
+							<td>
+								<form action="#">
+									<input type="number" placeholder="ilość" size="5" name="points" min="0" max="20">
+								<form>
+							</td>
+							<td>Wartość łączna</td>
+						</tr>
+						<tr style="width:1150px;">
+							
+							<td>
+								<img src="koszyk.jpg" style="width:100px; height:100px;">
+							</td>
+							<td><label>Nazwa produktu</label></td>
+							<td>Cena</td>
+							<td>
+								<form action="#">
+									<input type="number" placeholder="ilość" size="5" name="points" min="0" max="20">
+								<form>
+							</td>
+							<td>Wartość łączna</td>
+						</tr>
+						<tr style="width:1150px;">
+							
+							<td>
+								<img src="koszyk.jpg" style="width:100px; height:100px;">
+							</td>
+							<td><label>Nazwa produktu</label></td>
+							<td>Cena</td>
+							<td>
+								<form action="#">
+									<input type="number" placeholder="ilość" size="5" name="points" min="0" max="20">
+								<form>
+							</td>
+							<td>Wartość łączna</td>
+						</tr>
+						<tr style="width:1150px;">
+							
+							<td>
+								<img src="koszyk.jpg" style="width:100px; height:100px;">
+							</td>
+							<td><label>Nazwa produktu</label></td>
+							<td>Cena</td>
+							<td>
+								<form action="#">
+									<input type="number" placeholder="ilość" size="5" name="points" min="0" max="20">
+								<form>
+							</td>
+							<td>Wartość łączna</td>
+						</tr>
+						<tr style="width:1150px;">
+							
+							<td>
+								<img src="koszyk.jpg" style="width:100px; height:100px;">
+							</td>
+							<td><label>Nazwa produktu</label></td>
+							<td>Cena</td>
+							<td>
+								<form action="#">
+									<input type="number" placeholder="ilość" size="5" name="points" min="0" max="20">
+								<form>
+							</td>
+							<td>Wartość łączna</td>
+						</tr>
+						<tr>
+							<td>
+								<br>
+							</td>
+						</tr>
+						<tr>
+							<td>								
+							</td>
+							<td></td>
+							<td></td>
+							<td>Razem</td>
+							<td><span style="border:0; margin-bottom:20px;" class="btn btn-info" data-toggle="modal" data-target="#myModal4">Przejdź do formularza</span></td>
+						</tr>	
+				</table>
+			</tbody>
+		</table>
+</div>
+
+<div id="footer">
+	<table style="width:1000px; height:36px; float:right;">
+	<tr>
+	<td><span style="border:0"  class="btn btn-default" data-toggle="modal" data-target="#myModal">
+	Dane firmy</span></td>
+	<td><span style="border:0"  class="btn btn-default" data-toggle="modal" data-target="#myModal2">
+	Kontakt</span></td>
+	<td><span style="border:0"  class="btn btn-default" data-toggle="modal" data-target="#myModal3">
+	Regulamin</span></td>
+	</tr></table>
+<!--MODAL  Dane firmy-->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					Dane firmy  
+				</div>
+					<div class="modal-footer">
+						<button class="btn btn-default" data-dismiss="modal">Zamknij</button>
+					</div>
+			</div>
+		</div>
+	</div>
+<!--MODAL2 Kontakt-->
+	<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					Kontakt
+				</div>
+					<div class="modal-footer">
+						<button class="btn btn-default" data-dismiss="modal">Zamknij</button>
+					</div>
+			</div>
+		</div>
+	</div>
+<!--MODAL3 Regulamin-->
+	<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					Copyright by Praktykanci MCCOM &trade; &copy 2016
+						 
+				</div>
+					<div class="modal-footer">
+						<button class="btn btn-default" data-dismiss="modal">Zamknij</button>
+					</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--MODAL4 Formularz-->
+<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog">
+    <div class="modal-content">
+				<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h3 class="modal-title">Zakup</h3>
+				</div>
+			<div class="modal-body">
+				<div class="form">
+				<form>
+						<div class="form-group" style="margin-left:15px;">
+							<div class='field'>
+								<span for="exampleInputPassword1">Imię</span>
+									<input type="text"  class="form-control" style="width:550px;" id="exampleInputPassword1" placeholder="Podaj imię">
+							</div>
+						</div>						
+					<div class="form-group">
+							<div class='field'>
+								<span for="inputPassword3" class="col-sm-2 control-label">Nazwisko</span><br>
+									<div class="col-sm-12">
+										<input type="text" class="form-control" style="width:550px;" id="inputPassword3" placeholder="Podaj nazwisko">
+								</div>
+							</div>
+					</div>
+						<div class="form-group">
+							<div class="field">
+								<span for="inputPassword3" class="col-sm-2 control-label">Email</span><br>
+									<div class="col-sm-12">
+										<input type="email" class="form-control" style="width:550px;" id="inputPassword3" placeholder="Podaj email">
+									</div>
+							</div>
+					</div>
+					<div class="form-group">
+						<div class='field'>
+								<span for="inputPassword3" class="col-sm-2 control-label">Województwo</span><br>
+									<div class="col-sm-12">
+										<select>
+											<option value="dolnośląskie">dolnośląskie</option>
+											<option value="śląskie">śląskie</option>
+											<option value="kujawsko-pomorskie">kujawsko-pomorskie</option>
+											<option value="lubelskie">lubelskie</option>
+											<option value="lubuskie">lubuskie</option>
+											<option value="łódzkie">łódzkie</option>
+											<option value="małopolskie">małopolskie</option>
+											<option value="mazowieckie">mazowieckie</option>
+											<option value="opolskie">opolskie</option>
+											<option value="podkarpackie">podkarpackie</option>
+											<option value="podlaskie">podlaskie</option>
+											<option value="pomorskie">pomorskie</option>
+											<option value="świętokrzyskie">świętokrzyskie</option>
+											<option value="warmińsko-mazurskie">warmińsko-mazurskie</option>
+											<option value="wielkopolskie">wielkopolskie</option>
+											<option value="zachodniopomorskie">zachodniopomorskie</option>
+										</select> 
+									</div>
+						</div>
+					</div>
+					<div class="form-group">
+							<div class='field'>	
+								<span for="inputPassword3" class="col-sm-2 control-label">Miasto</span><br>
+									<div class="col-sm-12">
+										<input type="text" class="form-control" style="width:550px;" id="inputPassword3" placeholder="Podaj miasto">
+									</div>
+							</div>
+					</div>
+					<div class="form-group">
+						<div class='field'>
+								<span for="inputPassword3" class="col-sm-2 control-label">Adres</span><br>
+									<div class="col-sm-12">
+										<input type="text" class="form-control" style="width:550px;" id="inputPassword3" placeholder="Podaj adres">
+									</div>
+						</div>
+					</div>					
+					<div class="form-group">
+							<div class='field'>
+								<span for="inputPassword3" class="col-sm-2 control-label">Poczta</span><br>
+									<div class="col-sm-12">
+										<input type="postcode" class="form-control" style="width:550px;" id="inputPassword3" placeholder="Podaj kod pocztowy">
+									</div>
+							</div>
+					</div>					
+					<div class="form-group">
+								<span for="inputPassword3" class="col-sm-2 control-label">Telefon</span><br>
+									<div class="col-sm-12">
+										<input type="phone" class="form-control" style="width:550px;" id="inputPassword3" placeholder="Podaj telefon (nieobowiązkowy)">
+									</div>
+					</div>			
+				</div>
+						<div class="modal-footer">
+							<div class='actions'>
+								<input type="submit" style="margin-left:485px; margin-top:20px;" class="btn btn-success" value="Zakup"  disabled="disabled"/>
+							</div>
+						</div>
+				</form>
+			</div>	
+	</div>
+</div>
+</div>
+</div>
+</body>
+</html> 
